@@ -164,6 +164,7 @@
       <button data-view="history" onclick="showView('history')">History</button>
     </nav>
     <button class="coach-link" onclick="openCoachPanel()">Coach Mode</button>
+      <button class="coach-link" onclick="doSignOut()">Sign Out</button>
   </div>
 </div>
 
@@ -447,6 +448,11 @@ var CONFIG = {
     await loadProfileAndStart();
   };
 
+  window.doSignOut = async function(){
+    await sb.auth.signOut();
+    location.reload();
+  };
+
   async function loadProfileAndStart(){
     var status = document.getElementById('login-status');
     var sessionRes = await sb.auth.getSession();
@@ -455,7 +461,8 @@ var CONFIG = {
     auth.user = user;
     var profRes = await sb.from('profiles').select('role,athlete_id').eq('id', user.id).single();
     if (profRes.error || !profRes.data){
-      if (status) status.textContent = 'Signed in, but no profile is set up for this account yet. Ask your coach to finish the Supabase setup step.';
+      var detail = profRes.error ? (profRes.error.message + ' (code: ' + (profRes.error.code||'none') + ')') : 'no matching row found';
+      if (status) status.textContent = 'Signed in (user id: ' + user.id + '), but profile lookup failed: ' + detail;
       return;
     }
     auth.role = profRes.data.role;
