@@ -278,7 +278,7 @@
 <div id="login-panel" style="position:fixed; inset:0; background:var(--charcoal); z-index:200; display:flex; align-items:center; justify-content:center; padding:20px;">
   <div class="card" style="max-width:380px; width:100%;">
     <h3>Sign In</h3>
-    <p class="small" style="margin-top:6px;">James and Coach each sign in with their own account.</p>
+    <p class="small" id="login-subtitle" style="margin-top:6px;">Sign in with your own account.</p>
     <label class="field-label" style="margin-top:12px;">Email</label>
     <input class="field" id="login-email" type="email" placeholder="you@example.com">
     <label class="field-label" style="margin-top:10px;">Password</label>
@@ -353,7 +353,7 @@ var CONFIG = {
   program: {
     1: {
       mon: {label:"Lower + Pull", note:"Phase 1 uses moderate reps and controlled movements to build technique, tissue tolerance, and consistency \u2014 the goal right now is learning how your body responds to lifting while still completing every swim practice.", exercises:[
-        {type:"sets", name:"Goblet Squat", sets:["8","8","8"], rest:"2 min", cue:"Controlled tempo, full depth you can hold with good posture."},
+        {type:"sets", name:"Hip Thrust", sets:["8","8","8"], rest:"90 sec", cue:"Strong squeeze at the top — knee-friendly hip power, direct carryover to your breaststroke pullout."},
         {type:"sets", name:"DB Romanian Deadlift", sets:["8","8","8"], rest:"90 sec", cue:"No slack in the setup — controlled the whole way down and up."},
         {type:"sets", name:"Pull-Ups or Weighted Pull-Ups", sets:["5-8","5-8","5-8"], rest:"90 sec", cue:"Full range, controlled tempo."},
         {type:"sets", name:"Chest-Supported Row", sets:["8","8","8"], rest:"75 sec", cue:"Squeeze the shoulder blades together at the top."},
@@ -364,7 +364,8 @@ var CONFIG = {
         {type:"sets", name:"Standing Cable Pulldown", sets:["8","8","8"], rest:"75 sec", cue:"Pull to your upper chest, elbows down and back."},
         {type:"sets", name:"Cable Row", sets:["10","10","10"], rest:"60 sec", cue:"Not heavy — controlled, squeeze your upper back. No pulling with your lower back."},
         {type:"sets", name:"DB Shoulder Press", sets:["8","8"], rest:"45 sec", cue:"Slow and controlled — this is durability work, not a strength test."},
-        {type:"sets", name:"Face Pulls", sets:["12","12"], rest:"45 sec", cue:"Light load, pull to your face, elbows high."}
+        {type:"sets", name:"Face Pulls", sets:["12","12"], rest:"45 sec", cue:"Light load, pull to your face, elbows high."},
+        {type:"sets", name:"Pallof Press", sets:["8/side","8/side"], rest:"45 sec", cue:"Brace and resist rotation — this is the trunk control behind better body position in every stroke."}
       ]},
       fri: {label:"Full Body + Arms", note:"The box jumps here are intentionally low volume \u2014 they're for explosiveness, not conditioning. Everything else stays moderate and controlled, same as Monday and Wednesday.", exercises:[
         {type:"sets", name:"Leg Press", sets:["8","8","8"], rest:"90 sec", cue:"Full range, controlled — knee-friendly alternative to leg extension work."},
@@ -376,7 +377,7 @@ var CONFIG = {
     },
     2: {
       mon: {label:"Lower + Pull", note:"Reps drop into the 6-8 range and loads go up \u2014 this is where real strength gets built. You've already got a strong base, so the goal isn't more muscle, it's more force. Get stronger without getting wrecked.", exercises:[
-        {type:"sets", name:"Back Squat", sets:["6","6","6"], rest:"2.5-3 min", cue:"Heavier than Phase 1 — full depth, strict positioning."},
+        {type:"sets", name:"Hip Thrust", sets:["6","6","6"], rest:"2 min", cue:"Heavier than Phase 1 — powerful, controlled lockout."},
         {type:"sets", name:"DB Romanian Deadlift", sets:["6","6","6"], rest:"90 sec", cue:"Controlled, no slack in the setup."},
         {type:"sets", name:"Pull-Ups or Weighted Pull-Ups", sets:["5-6","5-6","5-6"], rest:"90 sec", cue:"Add load once bodyweight reps feel solid."},
         {type:"sets", name:"Single-Arm DB Row", sets:["8/side","8/side","8/side"], rest:"75 sec", cue:"Squeeze at the top, controlled — no twisting through the torso."},
@@ -384,10 +385,11 @@ var CONFIG = {
       ]},
       wed: {label:"Upper", note:"Same principle as Monday — heavier, lower reps, controlled. You should be feeling these strength numbers move up this phase; that's the whole point.", exercises:[
         {type:"sets", name:"DB Bench Press", sets:["6","6","6"], rest:"2 min", cue:"Heavier — press with intent, control the lower."},
-        {type:"sets", name:"Lat Pulldown", sets:["6-8","6-8","6-8"], rest:"90 sec", cue:"Pull to your upper chest, elbows down and back."},
+        {type:"sets", name:"Standing Cable Pulldown", sets:["6-8","6-8","6-8"], rest:"90 sec", cue:"Pull to your upper chest, elbows down and back."},
         {type:"sets", name:"Cable Row", sets:["8","8","8"], rest:"75 sec", cue:"Controlled, squeeze your upper back — no lower-back pulling."},
         {type:"sets", name:"DB Shoulder Press", sets:["6-8","6-8"], rest:"60 sec", cue:"Controlled press, full lockout."},
-        {type:"sets", name:"Face Pulls", sets:["10","10"], rest:"60 sec", cue:"Light load, external rotation focus."}
+        {type:"sets", name:"Face Pulls", sets:["10","10"], rest:"60 sec", cue:"Light load, external rotation focus."},
+        {type:"sets", name:"Pallof Press", sets:["8/side","8/side"], rest:"45 sec", cue:"Brace and resist rotation — trunk control for better body position."}
       ]},
       fri: {label:"Full Body + Arms", note:"Strength focus continues. Box jumps stay low volume for the same reason as Phase 1 — explosiveness, not conditioning, not fatigue.", exercises:[
         {type:"sets", name:"Leg Press", sets:["6","6","6"], rest:"2 min", cue:"Heavier than Phase 1 — full range, controlled."},
@@ -399,8 +401,8 @@ var CONFIG = {
     },
     3: {
       mon: {label:"Lower Power + Pull", note:"The goal now isn't more weight — it's teaching the strength you've already built to show up fast. Reps drop to 3-5, contrast pairs teach your body to convert that strength into speed, and unnecessary volume gets cut. Strength \u2192 Speed \u2192 Swimming performance.", exercises:[
-        {type:"contrast", name:"Back Squat &rarr; Box Jump", rounds:3, liftReps:"3", jumpReps:"3", restBetween:"20-30 sec", restRounds:"2-3 min", cue:"Heavy squat, short rest, then max-effort box jumps. Quality over quantity — stop if jump height or landing quality drops."},
-        {type:"sets", name:"Bulgarian Split Squat", sets:["5/leg","5/leg","5/leg"], rest:"90 sec", cue:"Controlled through the full range, back knee tracks straight down."},
+        {type:"contrast", name:"Hip Thrust &rarr; Box Jump", rounds:3, liftReps:"3", jumpReps:"3", restBetween:"20-30 sec", restRounds:"2-3 min", cue:"Powerful hip thrust, short rest, then max-effort box jumps. Quality over quantity — stop if jump height or landing quality drops."},
+        {type:"sets", name:"Single-Leg RDL", sets:["5/leg","5/leg","5/leg"], rest:"90 sec", cue:"Controlled balance and hip-hinge — same single-leg benefit, no deep knee flexion."},
         {type:"sets", name:"DB Romanian Deadlift", sets:["5","5","5"], rest:"90 sec", cue:"Controlled, no slack in the setup."},
         {type:"sets", name:"Pull-Ups or Weighted Pull-Ups", sets:["5","5","5"], rest:"90 sec", cue:"Fast pull, controlled descent."},
         {type:"sets", name:"Calf Raises", sets:["8","8"], rest:"60 sec", cue:"Full stretch at the bottom, full squeeze at the top."}
@@ -410,10 +412,11 @@ var CONFIG = {
         {type:"sets", name:"Standing Cable Pulldown", sets:["6","6","6"], rest:"90 sec", cue:"Pull to your upper chest, elbows down and back."},
         {type:"sets", name:"Single-Arm DB Row", sets:["6/side","6/side","6/side"], rest:"75 sec", cue:"Controlled, no twisting through the torso."},
         {type:"sets", name:"DB Shoulder Press", sets:["6","6"], rest:"60 sec", cue:"Controlled press, full lockout."},
-        {type:"sets", name:"Face Pulls", sets:["10","10"], rest:"60 sec", cue:"Light load, external rotation focus."}
+        {type:"sets", name:"Face Pulls", sets:["10","10"], rest:"60 sec", cue:"Light load, external rotation focus."},
+        {type:"sets", name:"Pallof Press", sets:["8/side","8/side"], rest:"45 sec", cue:"Brace and resist rotation — stays in every phase, this is what body position actually comes from."}
       ]},
       fri: {label:"Full Body Power", note:"Same conversion idea one more time to close the week — strength into speed. Everything trims down in volume as the season goes on; that's intentional, not a sign of losing ground.", exercises:[
-        {type:"contrast", name:"Goblet Squat &rarr; Box Jump", rounds:3, liftReps:"4", jumpReps:"3", restBetween:"20-30 sec", restRounds:"90 sec", cue:"Moderate load squat, then max-effort box jumps. Stop if jump quality drops."},
+        {type:"contrast", name:"Leg Press &rarr; Broad Jump", rounds:3, liftReps:"4", jumpReps:"3", restBetween:"20-30 sec", restRounds:"90 sec", cue:"Moderate load leg press, then max-effort broad jump. Stop if jump quality drops."},
         {type:"sets", name:"Leg Press", sets:["5","5","5"], rest:"2 min", cue:"Full range, controlled."},
         {type:"sets", name:"DB Incline Press", sets:["5","5","5"], rest:"90 sec", cue:"Moderate incline, controlled tempo."},
         {type:"sets", name:"Hamstring Curl", sets:["8","8"], rest:"75 sec", cue:"Slow and controlled, squeeze at the top."},
@@ -422,7 +425,7 @@ var CONFIG = {
     }
   },
 
-  progressLifts: ["Back Squat","DB Bench Press","Pull-Up","Leg Press","DB Romanian Deadlift","Standing Cable Pulldown"]
+  progressLifts: ["Hip Thrust","DB Bench Press","Pull-Up","Leg Press","DB Romanian Deadlift","Standing Cable Pulldown"]
 };
 /* ========================= END COACH-EDITABLE SECTION ===================== */
 
@@ -437,6 +440,8 @@ var CONFIG = {
   var SUPABASE_ANON_KEY = "sb_publishable_v83BXXAIW3UoMrndPi4tCw_cMoaPbnR";
   var sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
   var auth = { user:null, role:null, athleteId:null };
+  var subtitleEl = document.getElementById('login-subtitle');
+  if (subtitleEl && CONFIG.athleteName) subtitleEl.textContent = CONFIG.athleteName + ' and Coach each sign in with their own account.';
 
   window.doSignIn = async function(){
     var email = document.getElementById('login-email').value.trim();
@@ -841,7 +846,7 @@ var CONFIG = {
   };
 
   // ---------------- PROGRESS ----------------
-  var progLifts = ['Back Squat','DB Bench Press','Pull-Up','Leg Press','DB Romanian Deadlift','Standing Cable Pulldown'];
+  var progLifts = ['Hip Thrust','DB Bench Press','Pull-Up','Leg Press','DB Romanian Deadlift','Standing Cable Pulldown'];
   function renderProgress(){
     var html = '';
     progLifts.forEach(function(name, i){
