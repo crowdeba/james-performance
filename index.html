@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
-<title>James's Training</title>
+<title>Jayce's Training</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="apple-mobile-web-app-title" content="James's Training">
+<meta name="apple-mobile-web-app-title" content="Jayce's Training">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#2B2B2B">
 <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='34' fill='%232B2B2B'/%3E%3Ccircle cx='90' cy='90' r='58' fill='%23C8102E' stroke='%23fff' stroke-width='6'/%3E%3Ctext x='90' y='108' font-family='Arial' font-weight='800' font-size='58' fill='%23fff' text-anchor='middle'%3EJC%3C/text%3E%3C/svg%3E">
@@ -55,8 +55,6 @@
   .card.accent-red{border-left:4px solid var(--red);}
   .card.accent-charcoal{border-left:4px solid var(--charcoal);}
   .card h3{font-size:13.5px; letter-spacing:0.06em;}
-  .note-box{border-radius:8px; padding:12px 14px; font-size:12.5px; margin-bottom:10px;}
-  .note-box.grey{background:#F2F2F2; border:1px solid #DADADA; color:#333;}
   .small{font-size:12px; color:var(--slate);}
 
   label.field-label{display:block; font-size:10px; text-transform:uppercase; letter-spacing:0.06em; color:var(--slate); margin-bottom:4px; font-weight:700;}
@@ -162,7 +160,7 @@
 
 <div class="topbar">
   <div class="topbar-inner">
-    <div class="brand"><div class="brand-mark">JH</div><h1>James's Training</h1></div>
+    <div class="brand"><div class="brand-mark">JC</div><h1>Jayce's Training</h1></div>
     <nav class="pillnav">
       <button data-view="home" class="active" onclick="showView('home')">Home</button>
       <button data-view="workouts" onclick="showView('workouts')">Workouts</button>
@@ -191,20 +189,15 @@
     </div>
 
     <div class="hero">
-      <span class="eyebrow" style="color:#FF6B7A;">James's Training</span>
+      <span class="eyebrow" style="color:#FF6B7A;">Jayce's Training</span>
       <h2 id="home-phase">Current Phase: Loading...</h2>
       <div class="phase-line" id="home-phase-blurb"></div>
-      <p class="small" style="color:#C9C9C9; margin-top:8px;">"The goal is to leave the weight room better prepared for swimming — not exhausted from lifting."</p>
       <button class="today-btn" onclick="goToToday()">Today's Workout &rarr;</button>
       <div class="week-row" id="home-week"></div>
     </div>
     <div class="card accent-red">
       <h3>Upcoming Meet</h3>
       <div id="home-next-meet" class="small" style="margin-top:6px;"></div>
-    </div>
-    <div class="card accent-charcoal" style="margin-top:14px;">
-      <h3>December Checkpoint</h3>
-      <p class="small" style="margin-top:6px;">Midseason isn't just a warm-up for later — it's a real performance checkpoint. By then: stronger than Phase 1, healthy, completing every practice, better body position, and able to express that strength as speed. Ready to swim fast, not just ready to have trained.</p>
     </div>
     <div class="card accent-charcoal" id="thisweek-card" style="display:none; margin-top:14px;"></div>
   </div>
@@ -243,7 +236,7 @@
       <p class="small">Tap a date above to see what's happening that day.</p>
     </div>
     <div class="card" style="margin-top:12px;">
-      <p class="small">Individual high school meets aren't on here yet &mdash; those get added closer to the HS season. Everything shown right now is shared across the Senior Elite group.</p>
+      <p class="small"><strong>HS Sectionals (Feb 12), Districts (Feb 20), and States (Feb 26&ndash;27)</strong> are on the calendar. The championship taper starting around Feb 10 shows as "Modified" &mdash; the exact lifting plan for that stretch is still TBD and can be filled in later via Coach Mode.</p>
     </div>
   </div>
 
@@ -261,22 +254,16 @@
     <h2 style="font-size:19px;">Training Rules</h2>
     <p class="lede">A few simple ideas behind every workout on this site &mdash; not rules being handed down, just the reasoning so you know why it's built this way.</p>
     <div class="grid grid-2" style="margin-top:14px;">
-      <div class="card accent-red"><h3>Pool First</h3><p class="small" style="margin-top:6px;">Lifting supports swimming &mdash; it should not interfere with swim performance. If lifting makes you worse at practice, the workout was too much.</p></div>
+      <div class="card accent-red"><h3>Pool First</h3><p class="small" style="margin-top:6px;">Lifting supports swimming &mdash; it should not interfere with swim performance.</p></div>
       <div class="card accent-charcoal"><h3>No Failure</h3><p class="small" style="margin-top:6px;">Do not train to failure. Finish normal strength sets with roughly 2&ndash;3 good reps left.</p></div>
-      <div class="card accent-red"><h3>Quality Over Weight</h3><p class="small" style="margin-top:6px;">Perfect technique and controlled reps matter more than adding weight. More weight is not automatically better.</p></div>
+      <div class="card accent-red"><h3>Quality Over Weight</h3><p class="small" style="margin-top:6px;">Perfect technique and controlled reps matter more than adding weight.</p></div>
       <div class="card accent-charcoal"><h3>Don't Chase Soreness</h3><p class="small" style="margin-top:6px;">The goal is to get stronger and more explosive, not to be extremely sore.</p></div>
       <div class="card accent-red"><h3>Explosive = Explosive</h3><p class="small" style="margin-top:6px;">For jumps and other power exercises, stop if speed, jump height, or landing quality starts to decline.</p></div>
       <div class="card accent-charcoal"><h3>50&ndash;60 Minutes</h3><p class="small" style="margin-top:6px;">The goal is to get quality work done without turning lifting into another long training session.</p></div>
-      <div class="card accent-red"><h3>Warm Up First</h3><p class="small" style="margin-top:6px;">Stretch and warm up before lifting, every time. Prehab is better than rehab &mdash; a few minutes now protects you from missing weeks later.</p></div>
-      <div class="card accent-charcoal"><h3>You Don't Need To Prove Anything</h3><p class="small" style="margin-top:6px;">You don't need to lift to failure to prove you belong. A successful session is one that makes you better at swimming, not one that leaves you the most wrecked.</p></div>
     </div>
     <div class="card accent-red" style="margin-top:14px;">
       <h3>Listen To Your Body</h3>
       <p class="small" style="margin-top:6px;">If swim fatigue is unusually high, communicate with the coach and adjust rather than forcing the workout. That's not weakness &mdash; that's smart training.</p>
-    </div>
-    <div class="card accent-charcoal" style="margin-top:14px;">
-      <h3>Why The Program Changes</h3>
-      <p class="small" style="margin-top:6px;">You're not lifting less because you're getting weaker. You're lifting differently because we're getting closer to racing. Phase 2 is where the strength numbers should move. Phase 3 is about expressing that strength as speed and power &mdash; it should feel shorter and sharper, not like a harder bodybuilding workout.</p>
     </div>
   </div>
 
@@ -289,7 +276,7 @@
     <div id="history-list" style="margin-top:14px;"></div>
   </div>
 
-  <div class="footer">James's Training &middot; Mon/Wed/Fri lifting &middot; Sep 2026 &ndash; Mar 2027 &middot; Fields reset when you close the page unless you write your numbers down.</div>
+  <div class="footer">Jayce's Training &middot; Mon/Wed/Fri lifting &middot; Sep 2026 &ndash; Mar 2027 &middot; Fields reset when you close the page unless you write your numbers down.</div>
 </div>
 
 <!-- ===================== COACH MODE PANEL ===================== -->
@@ -335,115 +322,127 @@ var CONFIG = {
   seasonEnd:   "2027-03-21",
 
   phaseBlocks: [
-    {phase:1, start:"2026-09-07", end:"2026-10-25", label:"Phase 1: Foundation", blurb:"Build movement quality, joint stability, core control, durability, and a strength base while keeping fatigue manageable."},
-    {phase:2, start:"2026-10-26", end:"2027-01-03", label:"Phase 2: Strength",   blurb:"Build meaningful strength and force production that transfers to the pool, while keeping total volume controlled enough to protect swim-practice quality."},
-    {phase:3, start:"2027-01-04", end:"2027-03-21", label:"Phase 3: Power",      blurb:"Convert the strength you've built into explosive force and swimming speed while minimizing lifting fatigue."}
+    {phase:1, start:"2026-09-07", end:"2026-10-25", label:"Phase 1: Foundation", blurb:"Learning the lifts, building your base."},
+    {phase:2, start:"2026-10-26", end:"2027-01-03", label:"Phase 2: Strength",   blurb:"Heavier loads — teaching your body to produce more force."},
+    {phase:3, start:"2027-01-04", end:"2027-03-21", label:"Phase 3: Power",      blurb:"Turning strength into speed."}
   ],
 
-  // Shared Senior Elite meets — same across every athlete on this system.
-  // Individual high school meets get added later, per-athlete, once the HS season is closer.
   meets: [
     {start:"2026-10-03", end:"2026-10-03", label:"Homecoming"},
     {start:"2026-10-04", end:"2026-10-04", label:"CAC Pentathlon"},
     {start:"2026-10-17", end:"2026-10-17", label:"Tri Meet"},
     {start:"2026-10-23", end:"2026-10-25", label:"WTRC Meet"},
     {start:"2026-11-06", end:"2026-11-08", label:"Fort Wayne Invite"},
-    {start:"2026-11-13", end:"2026-11-15", label:"Mason Meet"},
     {start:"2026-12-11", end:"2026-12-13", label:"Midseason Meet"},
+    {start:"2027-02-12", end:"2027-02-12", label:"HS Sectionals"},
+    {start:"2027-02-20", end:"2027-02-20", label:"HS Districts"},
+    {start:"2027-02-26", end:"2027-02-27", label:"HS States"},
     {start:"2027-03-04", end:"2027-03-07", label:"Makos Senior Champs"},
     {start:"2027-03-18", end:"2027-03-21", label:"Sectionals"}
   ],
 
+  // "Reduced" tapers: Jayce still lifts these days, just lighter. Does NOT remove the workout.
   tapers: [
     {start:"2026-11-04", end:"2026-11-05", label:"Taper: Fort Wayne Invite"},
     {start:"2026-12-08", end:"2026-12-10", label:"Taper: Midseason Meet"}
   ],
 
+  // liftOverrides: for specific lift days (Mon/Wed/Fri) where Jayce is NOT doing the normal
+  // workout. mode "no-lift" = full rest, no workout shown at all. mode "modified" = plan is
+  // still TBD, shown as "Modified Workout" instead of the normal exercise list. These take
+  // priority over the normal Mon/Wed/Fri program on the calendar and in "Today's Workout."
   liftOverrides: [
     {start:"2026-10-23", end:"2026-10-23", mode:"no-lift", label:"No Lift — WTRC Meet"},
+    {start:"2026-11-04", end:"2026-11-04", mode:"modified", label:"Modified Workout"},
     {start:"2026-11-06", end:"2026-11-06", mode:"no-lift", label:"No Lift — Fort Wayne Invite"},
-    {start:"2026-11-13", end:"2026-11-13", mode:"no-lift", label:"No Lift — Mason Meet"},
+    {start:"2026-11-09", end:"2026-11-09", mode:"no-lift", label:"No Lift"},
+    {start:"2026-11-27", end:"2026-11-27", mode:"no-lift", label:"No Lift — Thanksgiving"},
+    {start:"2026-12-09", end:"2026-12-09", mode:"modified", label:"Modified Workout"},
     {start:"2026-12-11", end:"2026-12-11", mode:"no-lift", label:"No Lift — Midseason Meet"},
-    {start:"2027-03-05", end:"2027-03-05", mode:"no-lift", label:"No Lift — Senior Champs"}
+    {start:"2026-12-14", end:"2026-12-14", mode:"no-lift", label:"No Lift"},
+    {start:"2027-01-01", end:"2027-01-01", mode:"no-lift", label:"No Lift — New Year's Day"},
+    {start:"2027-02-10", end:"2027-02-28", mode:"modified", label:"HS Championship Taper — plan TBD"},
+    {start:"2027-03-03", end:"2027-03-03", mode:"no-lift", label:"No Lift — Senior Champs"},
+    {start:"2027-03-05", end:"2027-03-05", mode:"no-lift", label:"No Lift — Senior Champs"},
+    {start:"2027-03-15", end:"2027-03-19", mode:"no-lift", label:"No Lift — Sectionals Week"}
   ],
 
-  hsChampionships: "Individual high school meets will be added closer to the HS season.",
-  athleteName: "James Hossler",
+  hsChampionships: "HS Sectionals Feb 12, Districts Feb 20, States Feb 26–27, 2027",
+  athleteName: "Jayce",
 
+  // Each day: array of exercises. type "sets" = normal exercise with N sets.
+  // type "contrast" = heavy lift + explosive jump pair. type "superset" = two moves back to back.
   program: {
     1: {
-      mon: {label:"Lower + Pull", note:"Phase 1 uses moderate reps and controlled movements to build technique, tissue tolerance, and consistency \u2014 the goal right now is learning how your body responds to lifting while still completing every swim practice.", exercises:[
-        {type:"sets", name:"Hip Thrust", sets:["8","8","8"], rest:"90 sec", cue:"Strong squeeze at the top — knee-friendly hip power, direct carryover to your breaststroke pullout."},
-        {type:"sets", name:"DB Romanian Deadlift", sets:["8","8","8"], rest:"90 sec", cue:"No slack in the setup — controlled the whole way down and up."},
-        {type:"sets", name:"Pull-Ups or Weighted Pull-Ups", sets:["5-8","5-8","5-8"], rest:"90 sec", cue:"Full range, controlled tempo."},
-        {type:"sets", name:"Chest-Supported Row", sets:["8","8","8"], rest:"75 sec", cue:"Squeeze the shoulder blades together at the top."},
-        {type:"sets", name:"Calf Raises", sets:["10/side","10/side","10/side"], rest:"60 sec", cue:"Full stretch at the bottom, full squeeze at the top."}
+      mon: {label:"Lower + Pull", exercises:[
+        {type:"sets", name:"Box Jump", sets:["3","3","3"], rest:"60-90 sec", cue:"Jump as high as possible. Land softly and reset completely between reps. Stop if jump height or landing quality drops."},
+        {type:"sets", name:"Trap Bar Deadlift", sets:["8","8","8"], rest:"2 min", cue:"Own the setup. Drive through the full foot."},
+        {type:"sets", name:"Weighted Step-Up", sets:["8/leg","8/leg","8/leg"], rest:"90 sec", cue:"Control the step down — that's where step-ups get you."},
+        {type:"sets", name:"Pull-Up", sets:["8-10","8-10","8-10"], rest:"90 sec", cue:"Full range, controlled tempo."},
+        {type:"sets", name:"Lat Pulldown", sets:["10","10","10"], rest:"75 sec", cue:"Full range, controlled — a different pulling angle than pull-ups, real lat volume."},
+        {type:"sets", name:"Chest-Supported / Angled Seated Row", sets:["10","10","10"], rest:"75-90 sec", cue:"Squeeze the shoulder blades together at the top."},
+        {type:"sets", name:"Bird Dog / Anti-Rotation Press", sets:["10/side","10/side","10/side"], rest:"60 sec", cue:"Core stability — move slow, stay square."}
       ]},
-      wed: {label:"Upper + Core", note:"Same idea as Monday \u2014 moderate reps, controlled tempo, building a base without piling on fatigue before practice.", exercises:[
-        {type:"sets", name:"DB Bench Press", sets:["8","8","8"], rest:"90 sec", cue:"Control the tempo, no bounce off the chest."},
-        {type:"sets", name:"Standing Cable Pulldown", sets:["8","8","8"], rest:"75 sec", cue:"Pull to your upper chest, elbows down and back."},
-        {type:"sets", name:"Cable Row", sets:["10","10","10"], rest:"60 sec", cue:"Not heavy — controlled, squeeze your upper back. No pulling with your lower back."},
-        {type:"sets", name:"DB Shoulder Press", sets:["8","8"], rest:"45 sec", cue:"Slow and controlled — this is durability work, not a strength test."},
-        {type:"sets", name:"Face Pulls", sets:["12","12"], rest:"45 sec", cue:"Light load, pull to your face, elbows high."},
-        {type:"sets", name:"Pallof Press", sets:["8/side","8/side"], rest:"45 sec", cue:"Brace and resist rotation — this is the trunk control behind better body position in every stroke."}
+      wed: {label:"Upper + Shoulder Health", exercises:[
+        {type:"sets", name:"Dumbbell Chest Press", sets:["10","10","10"], rest:"90 sec", cue:"Control the tempo, no bounce off the chest."},
+        {type:"sets", name:"Dips or Tricep Pushdown", sets:["10","10","10"], rest:"90 sec", cue:"Pick whichever feels better on your shoulders that day."},
+        {type:"sets", name:"Face Pull", sets:["15","15","15"], rest:"60 sec", cue:"Light load, pull to your face, elbows high."},
+        {type:"sets", name:"Shoulder External Rotation", sets:["12/side","12/side","12/side"], rest:"45 sec", cue:"What this is: light band or cable, elbow tucked at your side, rotate your forearm outward. Strengthens the small rotator cuff muscles that stabilize your shoulder through every stroke."},
+        {type:"sets", name:"DB Lateral Raise", sets:["10","10","10"], rest:"60 sec", cue:"Light weight, lead with your elbows, don't shrug."}
       ]},
-      fri: {label:"Full Body + Arms", note:"Moderate and controlled, same as Monday and Wednesday.", exercises:[
-        {type:"sets", name:"Leg Press", sets:["8","8","8"], rest:"90 sec", cue:"Full range, controlled — knee-friendly alternative to leg extension work."},
-        {type:"sets", name:"DB Incline Press", sets:["8","8","8"], rest:"90 sec", cue:"Moderate incline, controlled tempo."},
-        {type:"sets", name:"Hip Abductor", sets:["10","10","10"], rest:"75 sec", cue:"Controlled range, no momentum."},
-        {type:"superset", name:"Curl + Skullcrusher Superset", rounds:3, rest:"60 sec after each round", cue:"Curls straight into skullcrushers, no rest between the two — rest after the round. Keep elbows stable throughout."}
+      fri: {label:"Full Body + Posterior Chain", exercises:[
+        {type:"sets", name:"Goblet Squat", sets:["10","10","10"], rest:"2 min", cue:"Full depth, controlled tempo."},
+        {type:"sets", name:"Dumbbell RDL", sets:["8-10","8-10","8-10"], rest:"90 sec", cue:"Push your hips back, feel your hamstrings load."},
+        {type:"sets", name:"Seated Row", sets:["10","10","10"], rest:"75 sec", cue:"Pause 1 second at the squeeze."},
+        {type:"sets", name:"Bent-Over Lateral Raise", sets:["12-15","12-15","12-15"], rest:"60 sec", cue:"Rear delts — light weight, strict form. Skip the 3rd set if the first two felt like plenty."},
+        {type:"sets", name:"Pallof Press", sets:["10/side","10/side","10/side"], rest:"45 sec", cue:"Resist rotation, slow and controlled."},
+        {type:"sets", name:"Hip Abductor / Adductor", sets:["12","12"], rest:"45 sec", cue:"Controlled, moderate weight — this hip strength feeds directly into your breaststroke kick."},
+        {type:"sets", name:"Bicep Curls", sets:["10","10","10"], rest:"60 sec", cue:"Controlled — no swinging the weight. 45-degree bench if available."}
       ]}
     },
     2: {
-      mon: {label:"Lower + Pull", note:"Reps drop into the 6-8 range and loads go up \u2014 this is where real strength gets built. You've already got a strong base, so the goal isn't more muscle, it's more force. Get stronger without getting wrecked.", exercises:[
-        {type:"sets", name:"Hip Thrust", sets:["6","6","6"], rest:"2 min", cue:"Heavier than Phase 1 — powerful, controlled lockout."},
-        {type:"sets", name:"DB Romanian Deadlift", sets:["6","6","6"], rest:"90 sec", cue:"Controlled, no slack in the setup."},
-        {type:"sets", name:"Pull-Ups or Weighted Pull-Ups", sets:["5-6","5-6","5-6"], rest:"90 sec", cue:"Add load once bodyweight reps feel solid."},
-        {type:"sets", name:"Single-Arm DB Row", sets:["8/side","8/side","8/side"], rest:"75 sec", cue:"Squeeze at the top, controlled — no twisting through the torso."},
-        {type:"sets", name:"Calf Raises", sets:["8-10","8-10","8-10"], rest:"60 sec", cue:"Full stretch at the bottom, full squeeze at the top."}
+      mon: {label:"Lower + Pull", exercises:[
+        {type:"sets", name:"Trap Bar Deadlift", sets:["5-6","5-6","5-6","5-6"], rest:"2.5 min", cue:"Heavier — pull the slack out of the bar first, then pull up."},
+        {type:"sets", name:"Weighted Step-Up", sets:["6-8/leg","6-8/leg","6-8/leg"], rest:"2 min", cue:"Added load vs. Phase 1 — control the step down."},
+        {type:"sets", name:"Weighted Pull-Up", sets:["5","5","5","5"], rest:"2 min", cue:"Add load once bodyweight x8-10 felt solid."},
+        {type:"sets", name:"Lat Pulldown", sets:["8","8","8"], rest:"75 sec", cue:"Heavier than Phase 1, controlled — real lat volume alongside your weighted pull-ups."},
+        {type:"sets", name:"Chest-Supported / Angled Seated Row", sets:["8","8","8"], rest:"90 sec", cue:"Controlled, no momentum."}
       ]},
-      wed: {label:"Upper", note:"Same principle as Monday — heavier, lower reps, controlled. You should be feeling these strength numbers move up this phase; that's the whole point.", exercises:[
-        {type:"sets", name:"DB Bench Press", sets:["6","6","6"], rest:"2 min", cue:"Heavier — press with intent, control the lower."},
-        {type:"sets", name:"Standing Cable Pulldown", sets:["6-8","6-8","6-8"], rest:"90 sec", cue:"Pull to your upper chest, elbows down and back."},
-        {type:"sets", name:"Cable Row", sets:["8","8","8"], rest:"75 sec", cue:"Controlled, squeeze your upper back — no lower-back pulling."},
-        {type:"sets", name:"DB Shoulder Press", sets:["6-8","6-8"], rest:"60 sec", cue:"Controlled press, full lockout."},
-        {type:"sets", name:"Face Pulls", sets:["10","10"], rest:"60 sec", cue:"Light load, external rotation focus."},
-        {type:"sets", name:"Pallof Press", sets:["8/side","8/side"], rest:"45 sec", cue:"Brace and resist rotation — trunk control for better body position."}
+      wed: {label:"Upper + Shoulder Health", exercises:[
+        {type:"sets", name:"Dumbbell Chest Press", sets:["5-7","5-7","5-7","5-7"], rest:"2.5 min", cue:"Heavier — press with intent."},
+        {type:"sets", name:"Tricep Rope Pressdown", sets:["8","8","8"], rest:"90 sec", cue:"Elbows pinned, full extension."},
+        {type:"sets", name:"Face Pull", sets:["15","15","15"], rest:"60 sec", cue:"Every phase — non-negotiable."},
+        {type:"sets", name:"Shoulder External Rotation", sets:["12/side","12/side","12/side"], rest:"45 sec", cue:"Same as Phase 1 — keep it light and controlled."}
       ]},
-      fri: {label:"Full Body + Arms", note:"Strength focus continues.", exercises:[
-        {type:"sets", name:"Leg Press", sets:["6","6","6"], rest:"2 min", cue:"Heavier than Phase 1 — full range, controlled."},
-        {type:"sets", name:"DB Incline Press", sets:["6-8","6-8","6-8"], rest:"90 sec", cue:"Moderate incline, controlled tempo."},
-        {type:"sets", name:"Hamstring Curl", sets:["8","8","8"], rest:"75 sec", cue:"Slow and controlled, squeeze at the top."},
-        {type:"superset", name:"DB Curl + Skullcrusher Superset", rounds:3, rest:"60 sec after each round", cue:"Curls straight into skullcrushers, no rest between the two — rest after the round."}
+      fri: {label:"Full Body + Posterior Chain", exercises:[
+        {type:"sets", name:"Box Jump", sets:["3-5","3-5","3-5"], rest:"2 min", cue:"Fresh legs first — land soft, reset each rep. Skip a rep if landings get sloppy."},
+        {type:"sets", name:"Goblet Squat", sets:["5-6","5-6","5-6"], rest:"2 min", cue:"Heavier, strict depth and position."},
+        {type:"superset", name:"Hamstring Curl + Leg Extension Superset", rounds:3, rest:"2 min", cue:"Straight from curls into extensions, no rest between the two — rest after each round."},
+        {type:"sets", name:"Seated Row", sets:["8","8","8"], rest:"90 sec", cue:"Add load vs. Phase 1."},
+        {type:"sets", name:"Hip Abductor / Adductor", sets:["10","10"], rest:"45 sec", cue:"Controlled, moderate weight — breaststroke-specific hip strength."},
+        {type:"sets", name:"Bicep Curls", sets:["10","10"], rest:"45 sec", cue:"Controlled arm work."}
       ]}
     },
     3: {
-      mon: {label:"Lower Power + Pull", note:"The goal now isn't more weight — it's teaching the strength you've already built to show up fast. Reps drop to 3-5, contrast pairs teach your body to convert that strength into speed, and unnecessary volume gets cut. Strength \u2192 Speed \u2192 Swimming performance.", exercises:[
-        {type:"contrast", name:"Hip Thrust &rarr; Squat Jump", rounds:3, liftReps:"3", jumpReps:"3", restBetween:"20-30 sec", restRounds:"2-3 min", cue:"Powerful hip thrust, short rest, then a max-effort squat jump. Quality over quantity — stop if jump height or landing quality drops."},
-        {type:"sets", name:"Single-Leg RDL", sets:["5/leg","5/leg","5/leg"], rest:"90 sec", cue:"Controlled balance and hip-hinge — same single-leg benefit, no deep knee flexion."},
-        {type:"sets", name:"DB Romanian Deadlift", sets:["5","5","5"], rest:"90 sec", cue:"Controlled, no slack in the setup."},
-        {type:"sets", name:"Pull-Ups or Weighted Pull-Ups", sets:["5","5","5"], rest:"90 sec", cue:"Fast pull, controlled descent."},
-        {type:"sets", name:"Calf Raises", sets:["8","8"], rest:"60 sec", cue:"Full stretch at the bottom, full squeeze at the top."}
+      mon: {label:"Lower + Pull", exercises:[
+        {type:"contrast", name:"Trap Bar Deadlift &rarr; Box Jump", rounds:3, liftReps:"2-3", jumpReps:"2-3", restBetween:"20-30 sec", restRounds:"2-3 min", cue:"Heavy pull, short rest, then max-effort box jumps. Quality over quantity — stop if jump height or landing gets sloppy."},
+        {type:"sets", name:"Weighted Pull-Up", sets:["5","5","5"], rest:"2 min", cue:"Explosive pull, controlled descent."},
+        {type:"sets", name:"Chest-Supported Row", sets:["8","8"], rest:"90 sec", cue:"Maintenance volume only."},
+        {type:"sets", name:"Bicep Curls", sets:["5-8","5-8"], rest:"45 sec", cue:"Maintenance."}
       ]},
-      wed: {label:"Upper Power", note:"Same principle as Monday — the contrast pair teaches your pressing strength to express itself quickly. This should feel shorter and sharper, not like a harder bodybuilding workout.", exercises:[
-        {type:"contrast", name:"DB Bench Press &rarr; Explosive Push-Up", rounds:3, liftReps:"4", jumpReps:"3", restBetween:"20-30 sec", restRounds:"2 min", cue:"Moderate load bench press, then explosive push-ups. Speed and cleanliness over fatigue."},
-        {type:"sets", name:"Standing Cable Pulldown", sets:["6","6","6"], rest:"90 sec", cue:"Pull to your upper chest, elbows down and back."},
-        {type:"sets", name:"Single-Arm DB Row", sets:["6/side","6/side","6/side"], rest:"75 sec", cue:"Controlled, no twisting through the torso."},
-        {type:"sets", name:"DB Shoulder Press", sets:["6","6"], rest:"60 sec", cue:"Controlled press, full lockout."},
-        {type:"sets", name:"Face Pulls", sets:["10","10"], rest:"60 sec", cue:"Light load, external rotation focus."},
-        {type:"sets", name:"Pallof Press", sets:["8/side","8/side"], rest:"45 sec", cue:"Brace and resist rotation — stays in every phase, this is what body position actually comes from."}
+      wed: {label:"Upper + Shoulder Health", exercises:[
+        {type:"sets", name:"Dumbbell Chest Press", sets:["5","5","5"], rest:"2.5 min", cue:"Speed on the press, control the lower."},
+        {type:"sets", name:"Skull Crushers", sets:["5-8","5-8","5-8"], rest:"90 sec", cue:"Slow and controlled."},
+        {type:"sets", name:"Face Pull", sets:["10","10"], rest:"60 sec", cue:"Maintained every phase."},
+        {type:"sets", name:"Shoulder External Rotation", sets:["10/side","10/side"], rest:"45 sec", cue:"Maintained every phase."}
       ]},
-      fri: {label:"Full Body Power", note:"Same conversion idea one more time to close the week — strength into speed. Everything trims down in volume as the season goes on; that's intentional, not a sign of losing ground.", exercises:[
-        {type:"contrast", name:"Leg Press &rarr; Broad Jump", rounds:3, liftReps:"4", jumpReps:"3", restBetween:"20-30 sec", restRounds:"90 sec", cue:"Moderate load leg press, then max-effort broad jump. Stop if jump quality drops."},
-        {type:"sets", name:"Leg Press", sets:["5","5","5"], rest:"2 min", cue:"Full range, controlled."},
-        {type:"sets", name:"DB Incline Press", sets:["5","5","5"], rest:"90 sec", cue:"Moderate incline, controlled tempo."},
-        {type:"sets", name:"Hamstring Curl", sets:["8","8"], rest:"75 sec", cue:"Slow and controlled, squeeze at the top."},
-        {type:"superset", name:"DB Curl + Skullcrusher Superset", rounds:2, rest:"60 sec after each round", cue:"Curls straight into skullcrushers, no rest between the two."}
+      fri: {label:"Full Body + Posterior Chain", exercises:[
+        {type:"contrast", name:"Goblet Squat &rarr; Broad Jump", rounds:3, liftReps:"2-3", jumpReps:"2", restBetween:"20-30 sec", restRounds:"2-3 min", cue:"Heavy squats, then explosive broad jumps. Track your jump distance — that's the number that matters here."},
+        {type:"superset", name:"Hamstring Curl + Leg Extension Superset", rounds:3, rest:"2 min", cue:"Maintain weight from Phase 2."},
+        {type:"sets", name:"Seated Row", sets:["5-6","5-6","5-6"], rest:"90 sec", cue:"Controlled, no pulling from the lower back."}
       ]}
     }
-  },
-
-  progressLifts: ["Hip Thrust","DB Bench Press","Pull-Up","Leg Press","DB Romanian Deadlift","Standing Cable Pulldown"]
+  }
 };
 /* ========================= END COACH-EDITABLE SECTION ===================== */
 
@@ -730,9 +729,9 @@ var CONFIG = {
   }
   function renderSupersetExercise(ex){
     var h = '<div class="contrast-card" data-exercise="'+ex.name.replace(/"/g,'&quot;')+'">';
-    h += '<div style="display:flex; justify-content:space-between; align-items:center;"><div class="ex-name">'+ex.name+'</div><button class="flag-ex-btn" onclick="toggleExerciseFlag(this, \''+ex.name.replace(/'/g,"\\'")+'\')" title="Flag to discuss at practice">&#9873;</button></div>';
+    h += '<div class="ex-name">'+ex.name+'</div>';
     h += '<div class="ex-cue" style="margin-top:6px;">'+ex.rounds+' rounds &middot; rest '+ex.rest+' between rounds &middot; '+ex.cue+'</div>';
-    h += '<div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:8px;"><input class="field log-weight" data-slot="a" placeholder="1st exercise, target 8-10"><input class="field log-weight" data-slot="b" placeholder="2nd exercise, target 8-10"></div>';
+    h += '<div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:8px;"><input class="field log-weight" data-slot="a" placeholder="Hamstring curl weight"><input class="field log-weight" data-slot="b" placeholder="Leg extension weight"></div>';
     for (var r=1;r<=ex.rounds;r++){
       h += '<div class="round-row" data-set="'+r+'"><input type="checkbox" class="log-done"><span class="small">Round '+r+' complete</span></div>';
     }
@@ -818,7 +817,8 @@ var CONFIG = {
       await sb.from('workout_sets').delete().eq('workout_id', workoutId);
       var payload = sets.map(function(s){ return Object.assign({workout_id: workoutId}, s); });
       if (payload.length) await sb.from('workout_sets').insert(payload);
-      await sb.from('workouts').update({ flagged_exercises: flaggedExercises.length ? flaggedExercises.join(', ') : null }).eq('id', workoutId);
+      var counts = computeExerciseCounts();
+      await sb.from('workouts').update({ flagged_exercises: flaggedExercises.length ? flaggedExercises.join(', ') : null, exercises_planned: counts.planned, exercises_completed: counts.completed }).eq('id', workoutId);
       var indicator = document.getElementById('autosave-indicator');
       if (indicator){
         indicator.textContent = 'Saved ' + new Date().toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'});
@@ -946,12 +946,8 @@ var CONFIG = {
     else if (isToday && taper) html += '<span class="tag blue">Taper Week &mdash; keep it light</span>';
     html += '</div>';
     if (isToday && !todayOverride) html += '<p class="small" style="margin-top:4px;">This is today\'s workout.</p>';
-    html += '<p class="small" style="margin-top:8px; color:var(--slate-light);">Rest between sets on purpose &mdash; a rushed set doesn\'t build strength the way a fully recovered one does.</p>';
+    html += '<p class="small" style="margin-top:8px; color:var(--slate-light);">Rest between sets on purpose \u2014 a rushed set doesn\'t build strength the way a fully recovered one does.</p>';
     html += '</div>';
-
-    if (day.note){
-      html += '<div class="note-box grey"><strong>Why this phase:</strong> '+day.note+'</div>';
-    }
 
     html += '<p class="small" id="autosave-indicator" style="text-align:right; color:var(--slate-light); opacity:0.6; margin:6px 4px 0 0;">&nbsp;</p>';
 
@@ -996,6 +992,24 @@ var CONFIG = {
     }
   };
 
+  function computeExerciseCounts(){
+    var dayObj = CONFIG.program[state.workoutPhase] && CONFIG.program[state.workoutPhase][state.workoutDay];
+    var exercises = (dayObj && dayObj.exercises) || [];
+    var planned = 0, completed = 0;
+    exercises.forEach(function(ex){
+      var cue = (ex.cue || '').toLowerCase();
+      if (cue.indexOf('optional') > -1) return;
+      planned++;
+      var exEl = document.querySelector('#workout-content [data-exercise="'+ex.name.replace(/"/g,'\\"')+'"]');
+      if (!exEl) return;
+      var hasActivity = false;
+      exEl.querySelectorAll('.log-done').forEach(function(cb){ if (cb.checked) hasActivity = true; });
+      exEl.querySelectorAll('.log-weight, .log-reps, .log-assist').forEach(function(inp){ if (inp.value) hasActivity = true; });
+      if (hasActivity) completed++;
+    });
+    return { planned: planned, completed: completed };
+  }
+
   function collectLoggedSets(){
     var rows = [];
     document.querySelectorAll('#workout-content [data-exercise]').forEach(function(exEl){
@@ -1008,6 +1022,7 @@ var CONFIG = {
         var weight = weightEl ? weightEl.value : null;
         var reps = repsEl ? repsEl.value : null;
         var done = doneEl ? doneEl.checked : false;
+        // Only save a row if something was actually entered or checked off
         if (weight || reps || done){
           rows.push({ exercise: exName, set_number: setNum, reps: reps || null, weight: weight || null, assistance: null });
         }
@@ -1045,7 +1060,8 @@ var CONFIG = {
         if (sRes.error){ if (status) status.textContent = 'Workout saved, but sets failed to save: ' + sRes.error.message; return; }
       }
 
-      var uRes = await sb.from('workouts').update({ completed: true, readiness: { feel: feel }, flagged_exercises: flaggedExercises.length ? flaggedExercises.join(', ') : null }).eq('id', workoutId);
+      var counts = computeExerciseCounts();
+      var uRes = await sb.from('workouts').update({ completed: true, readiness: { feel: feel }, flagged_exercises: flaggedExercises.length ? flaggedExercises.join(', ') : null, exercises_planned: counts.planned, exercises_completed: counts.completed }).eq('id', workoutId);
       if (uRes.error){ if (status) status.textContent = 'Could not finalize save: ' + uRes.error.message; return; }
 
       clearAutosaveRecord();
@@ -1149,7 +1165,7 @@ var CONFIG = {
   };
 
   // ---------------- PROGRESS ----------------
-  var progLifts = ['Hip Thrust','DB Bench Press','Pull-Up','Leg Press','DB Romanian Deadlift','Standing Cable Pulldown'];
+  var progLifts = ['Trap Bar Deadlift','Goblet Squat','Weighted Pull-Up','Dumbbell Chest Press','Weighted Step-Up','Dumbbell RDL','Jump / Power (optional)'];
   // ---------------- PROGRESS DATA ----------------
   var progressStartsCache = null;
   var progressCurrentCache = null;
@@ -1284,7 +1300,7 @@ var CONFIG = {
     listEl.innerHTML = '';
 
     var scopedId = await resolveSiteAthleteId();
-    if (!scopedId){ statusEl.innerHTML = '<p class="small">Could not find this athlete\'s record yet — check Supabase setup.</p>'; return; }
+    if (!scopedId){ statusEl.innerHTML = '<p class="small">Could not find this athlete record yet — check Supabase setup.</p>'; return; }
 
     var query = sb.from('workouts').select('id,workout_type,workout_label,phase,workout_date,readiness,notes').eq('athlete_id', scopedId).eq('completed', true).order('workout_date', {ascending:false}).order('created_at', {ascending:false});
     var res = await query;
@@ -1336,7 +1352,7 @@ var CONFIG = {
     el.innerHTML = html;
   };
 
-  // ---------------- COACH MODE ----------------
+
   window.openCoachPanel = function(){
     document.getElementById('coach-json').value = JSON.stringify(CONFIG, null, 2);
     document.getElementById('coach-panel').classList.add('open');
@@ -1376,6 +1392,7 @@ var CONFIG = {
     if (sessionRes.data.session){
       await loadProfileAndStart();
     }
+    // else: login-panel stays visible (it's shown by default in the HTML)
   })();
 })();
 </script>
