@@ -411,18 +411,6 @@ var CONFIG = {
         "homeNote": "optional 20-minute primer, only if your coach says go.",
         "exercises": [
           {
-            "name": "Squat Jump",
-            "sets": 2,
-            "reps": [
-              "3",
-              "3"
-            ],
-            "rest": "90 sec",
-            "noTarget": true,
-            "hint": "Use a lower box or smaller jumps than usual, full reset every rep. Quality only.",
-            "cue": "Fast and crisp. Stop at 2 sets."
-          },
-          {
             "name": "Leg Press",
             "sets": 2,
             "reps": [
@@ -491,11 +479,10 @@ var CONFIG = {
         {type:"sets", name:"Standing Cable Pulldown", sets:["6-8","6-8","6-8"], rest:"2 min", cue:"Pull to your upper chest, elbows down and back. Drive it up with intent, lower under control."},
         {type:"sets", name:"Cable Row", sets:["8","8","8"], rest:"2 min", cue:"Controlled, squeeze your upper back — no lower-back pulling. Drive it up with intent, lower under control."},
         {type:"sets", name:"DB Shoulder Press", sets:["6-8","6-8"], rest:"2 min", cue:"Controlled press, full lockout. Drive it up with intent, lower under control."},
-        {type:"sets", name:"Face Pulls", sets:["10","10"], rest:"60 sec", cue:"Light load, external rotation focus."},
+        {type:"sets", name:"Face Pulls", sets:["12","12"], rest:"60 sec", cue:"Light load, external rotation focus."},
         {type:"sets", name:"Pallof Press", sets:["8/side","8/side"], rest:"45 sec", cue:"Brace and resist rotation — trunk control for better body position."}
       ]},
       fri: {label:"Full Body + Arms", note:"Strength focus continues.", exercises:[
-        {type:"sets", name:"Squat Jump", sets:["3","3","3"], rest:"90 sec", cue:"Jump as high as you can, land soft, full reset between reps. Low volume on purpose."},
         {type:"sets", name:"Leg Press", sets:["6","6","6"], rest:"2 min", cue:"Heavier than Phase 1 — full range, controlled. Drive it up with intent, lower under control."},
         {type:"sets", name:"DB Incline Press", sets:["6-8","6-8","6-8"], rest:"2 min", cue:"Moderate incline, controlled tempo. Drive it up with intent, lower under control."},
         {type:"sets", name:"Hamstring Curl", sets:["8","8","8"], rest:"75 sec", cue:"Slow and controlled, squeeze at the top."},
@@ -505,7 +492,7 @@ var CONFIG = {
     },
     3: {
       mon: {label:"Lower Power + Pull", note:"The goal now isn't more weight — it's teaching the strength you've already built to show up fast. Reps drop to 3-5, contrast pairs teach your body to convert that strength into speed, and unnecessary volume gets cut. Strength \u2192 Speed \u2192 Swimming performance.", exercises:[
-        {type:"contrast", name:"Hip Thrust &rarr; Squat Jump", rounds:3, liftReps:"3", jumpReps:"3", restBetween:"20-30 sec", restRounds:"2-3 min", cue:"Powerful hip thrust, short rest, then a max-effort squat jump. Quality over quantity — stop if jump height or landing quality drops."},
+        {type:"sets", name:"Hip Thrust", sets:["5","5","5"], rest:"2 min", cue:"Powerful hip drive, controlled lowering. Drive it up with intent, lower under control."},
         {type:"sets", name:"Single-Leg RDL", sets:["5/leg","5/leg","5/leg"], rest:"90 sec", cue:"Controlled balance and hip-hinge — same single-leg benefit, no deep knee flexion."},
         {type:"sets", name:"DB Romanian Deadlift", sets:["5","5","5"], rest:"90 sec", cue:"Controlled, no slack in the setup."},
         {type:"sets", name:"Pull-Ups or Weighted Pull-Ups", sets:["5","5","5"], rest:"90 sec", cue:"Fast pull, controlled descent."},
