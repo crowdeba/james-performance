@@ -359,7 +359,7 @@ var CONFIG = {
 
   tapers: [
     {start:"2026-11-04", end:"2026-11-05", label:"Taper: Fort Wayne Invite"},
-    {start:"2026-12-08", end:"2026-12-10", label:"Taper: Midseason Meet"}
+    {start:"2026-12-03", end:"2026-12-10", label:"Taper: Midseason Meet"}
   ],
 
   // A "modified" entry that has a plan{} shows that exact reduced workout, with weight targets worked out
@@ -435,6 +435,136 @@ var CONFIG = {
         ]
       }},
     {start:"2026-11-13", end:"2026-11-13", mode:"no-lift", label:"No Lift — Mason Meet"},
+    // Holiday Classic taper (race Fri Dec 11): taper starts Thu Dec 3, lifts get lighter each time, last lift is Wed Dec 9, restart after the meet.
+    {start:"2026-12-04", end:"2026-12-04", mode:"modified", label:"Taper Lift — Midseason Meet",
+      plan:{
+        "chip": "Taper Lift",
+        "title": "Taper Lift",
+        "intro": "The taper starts this week, so today's lift is a little lighter: about three-quarters of the normal sets. Keep the weight close to normal (your targets are on each exercise), stop every set with 3 or more reps left, and move the bar fast and crisp. You should walk out feeling better than when you walked in.",
+        "dropped": [
+          "DB Curl + Skullcrusher Superset"
+        ],
+        "homeNote": "about three-quarters of the normal sets at near-normal weight. Open it that day to see your exact weights.",
+        "exercises": [
+          {
+            "name": "Leg Press",
+            "sets": 3,
+            "loadPct": 90
+          },
+          {
+            "name": "DB Incline Press",
+            "sets": 2,
+            "loadPct": 90
+          },
+          {
+            "name": "Hamstring Curl",
+            "sets": 3,
+            "loadPct": 90
+          },
+          {
+            "name": "Leg Extension",
+            "sets": 3,
+            "loadPct": 90
+          }
+        ]
+      }},
+    {start:"2026-12-07", end:"2026-12-07", mode:"modified", label:"Taper Lift — Midseason Meet",
+      plan:{
+        "chip": "Taper Lift",
+        "title": "Taper Lift",
+        "intro": "Racing is getting close, so today's lift is lighter again: a little over half of the normal sets. Keep the weight close to normal (your targets are on each exercise), stop every set with 3 or more reps left, and move the bar fast and crisp. The goal is to feel sharp for racing, not worked.",
+        "dropped": [
+          "Calf Raises"
+        ],
+        "homeNote": "a little over half of the normal sets at near-normal weight. Open it that day to see your exact weights.",
+        "exercises": [
+          {
+            "name": "Hip Thrust",
+            "sets": 3,
+            "loadPct": 85
+          },
+          {
+            "name": "DB Romanian Deadlift",
+            "sets": 2,
+            "loadPct": 85
+          },
+          {
+            "name": "Pull-Ups or Weighted Pull-Ups",
+            "sets": 2,
+            "loadPct": 90
+          },
+          {
+            "name": "Single-Arm DB Row",
+            "sets": 2,
+            "loadPct": 90
+          }
+        ]
+      }},
+    {start:"2026-12-09", end:"2026-12-09", mode:"modified", label:"Meet-Week Lift — Midseason Meet",
+      plan:{
+        "chip": "Meet-Week Lift",
+        "title": "Meet-Week Lift",
+        "intro": "Racing is close and this is your last lift before the meet: about half of the normal sets. Keep the weight close to normal (your targets are on each exercise), stop every set with 3 or more reps left, and move the bar fast and crisp. The goal is to feel sharp for racing, not worked.",
+        "dropped": [
+          "DB Shoulder Press",
+          "Pallof Press"
+        ],
+        "homeNote": "about half of the normal sets at near-normal weight. Open it that day to see your exact weights.",
+        "exercises": [
+          {
+            "name": "DB Bench Press",
+            "sets": 2,
+            "loadPct": 85
+          },
+          {
+            "name": "Standing Cable Pulldown",
+            "sets": 2,
+            "loadPct": 90
+          },
+          {
+            "name": "Cable Row",
+            "sets": 2,
+            "loadPct": 90
+          },
+          {
+            "name": "Face Pulls",
+            "sets": 2,
+            "loadPct": 100
+          }
+        ]
+      }},
+    {start:"2026-12-14", end:"2026-12-14", mode:"modified", label:"Optional Restart — Midseason Meet",
+      plan:{
+        "chip": "Optional Restart",
+        "title": "Optional Restart Lift",
+        "intro": "Optional. Only do this if you feel good after racing. Skip it if you are sore, sick or flat. If you do it, it is about 70% of the normal sets, so you ease back in. Keep the weight close to normal (your targets are on each exercise), stop every set with 3 or more reps left, and move the bar fast and crisp. Next lift goes back to normal.",
+        "dropped": [
+          "Calf Raises"
+        ],
+        "homeNote": "optional, about 70% of the normal sets. Only if you feel good after racing.",
+        "exercises": [
+          {
+            "name": "Hip Thrust",
+            "sets": 3,
+            "loadPct": 90
+          },
+          {
+            "name": "DB Romanian Deadlift",
+            "sets": 3,
+            "loadPct": 90
+          },
+          {
+            "name": "Pull-Ups or Weighted Pull-Ups",
+            "sets": 3,
+            "loadPct": 95
+          },
+          {
+            "name": "Single-Arm DB Row",
+            "sets": 2,
+            "loadPct": 95
+          }
+        ]
+      }},
     {start:"2026-12-11", end:"2026-12-11", mode:"no-lift", label:"No Lift — Midseason Meet"},
     {start:"2027-03-05", end:"2027-03-05", mode:"no-lift", label:"No Lift — Senior Champs"}
   ],
